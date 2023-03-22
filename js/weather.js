@@ -18,6 +18,7 @@ function getWeather(lat, lon){
         data: {units:"metric"}, // 섭씨로 변환
         success: function (data) {
             Info(data)// temp, weather
+            menuInfo(data)
         },
         error: function (arg) {
             alert("통신실패시에만 실행");
@@ -41,3 +42,24 @@ function getWeather(lat, lon){
     $('.tempInfo').append(temp)
     $('.weatherInfo').append(weather)
 }
+
+function menuInfo(data) {
+    let weatherIcon = data.weather[0].icon
+    if(weatherIcon == '03d'){
+        
+    }
+}
+
+
+
+let icon = document.querySelectorAll('.list')
+let indi = document.querySelector('.indicator')
+
+function menuAct(e){
+    icon.forEach((i) =>
+    i.classList.remove("active"))
+    this.classList.add("active")
+    e.preventDefault();
+}
+icon.forEach((i)=>
+i.addEventListener('click', menuAct))
