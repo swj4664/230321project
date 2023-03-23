@@ -27,14 +27,14 @@ function getWeather(lat, lon) {
 }
 
 function Info(data) {
+    let now = 0
     let weatherGet = data.weather[0].description
     let tempUp = Math.ceil(data.main.temp * 10) / 10; // 반올림
     let temp = ''
     let weather = ''
-    let icon = ''
+    now++
+    if(now <= tempUp){
 
-    if (weatherGet == '맑음') {
-        icon += `<img src="./img/sun.png" alt="" style="width:25px; height:25px; position:absolute;">`
     }
 
     temp += `<span>현재온도는 ${tempUp}°C</span>`
