@@ -30,17 +30,31 @@ function Info(data) {
     let now = 0
     let weatherGet = data.weather[0].description
     let tempUp = Math.ceil(data.main.temp * 10) / 10; // 반올림
-    let temp = ''
+    // let temp = ''
     let weather = ''
-    now++
-    if(now <= tempUp){
 
-    }
-
-    temp += `<span>현재온도는 ${tempUp}°C</span>`
-    weather += `<span>날씨는 '${weatherGet}'입니다</span>`
-    $('.tempInfo').append(temp)
+    // temp += `<span>현재온도는 ${num}°C</span>`
+    weather += `<span>날씨는 <span>'${weatherGet}'</span> 상태입니다</span>`
+    // $('.tempInfo').append(temp)
     $('.weatherInfo').append(weather)
+
+//숫자 증가 애니메이션
+    $({ val: 0 }).animate({ val: tempUp }, {
+        duration: 1000,
+        step: function () {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".tempInfo").text(num);
+        },
+        complete: function () {
+            var num = numberWithCommas(this.val.toFixed(1));
+            $(".tempInfo").text(num);
+        }
+    });
+
+    function numberWithCommas(x) {
+        return x
+    }
+// 숫자증가 애니메이션 끝
 }
 
 
@@ -91,3 +105,5 @@ function menuAct(e) {
 }
 icon.forEach((i) =>
     i.addEventListener('click', menuAct))
+
+

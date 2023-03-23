@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.hello {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+}
+
+.hello a {
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 5px solid;
+    overflow: hidden;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: .05em;
+    animation:
+        typing 2s steps(18),
+        cursor .4s step-end infinite alternate
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+
+
+.hello span {
+    font-weight: 400;
+}
+
