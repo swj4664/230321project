@@ -27,7 +27,6 @@ function getWeather(lat, lon) {
 }
 
 function Info(data) {
-    let now = 0
     let weatherGet = data.weather[0].description
     let tempUp = Math.ceil(data.main.temp * 10) / 10; // 반올림
     // let temp = ''
@@ -106,9 +105,3 @@ function menuAct(e) {
 icon.forEach((i) =>
     i.addEventListener('click', menuAct))
 
-
-
-
-  if(window.innerWidth <= 600){
-
-  }

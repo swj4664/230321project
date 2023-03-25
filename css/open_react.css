@@ -1,24 +1,109 @@
-@media only screen and (max-width: 600px) {
-    .hello {
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
-        text-align: center;
-    }
-    
+@media only screen and (max-width: 1000px) {
     .hello a {
         display: inline-block;
         white-space: nowrap;
         border-right: 5px solid;
         overflow: hidden;
-        font-size: 20px;
+        font-size: 40px;
         font-weight: 300;
         letter-spacing: .05em;
         animation:
             typing 2s steps(18),
             cursor .4s step-end infinite alternate
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .hello {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .hello a {
+        display: none;
+        white-space: nowrap;
+        border-right: 5px solid;
+        overflow: hidden;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: .05em;
+        animation:
+            typing 2s steps(18),
+            cursor .4s step-end infinite alternate
+    }
+
+    .hello a:nth-child(2).active {
+        display: block;
+        white-space: nowrap;
+        border-right: 3px solid transparent;
+        overflow: hidden;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: .05em;
+        animation:
+            typing2 2s steps(18),
+            cursor .4s step-end alternate;
+    }
+
+    @keyframes typing2 {
+        0% {
+            width: 0;
+            border-right: 3px solid black;
+        }
+
+        99% {
+            width: 100%;
+            border-right: 3px solid black;
+        }
+
+        100% {
+            width: 100%;
+            border-right: 3px solid transparent;
+        }
+    }
+
+
+    .hello2 {
+        display: inline-block;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+    .hello2 a {
+        display: none;
+    }
+
+    .hello2 a.active {
+        display: inline-block;
+        white-space: nowrap;
+        border-right: 3px solid black;
+        overflow: hidden;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: .05em;
+        animation:
+            typing3 1s steps(8),
+            cursor .4s step-end infinite alternate;
+    }
+
+    @keyframes typing3 {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+            color: black;
+        }
+    }
+
 }

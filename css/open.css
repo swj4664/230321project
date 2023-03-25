@@ -42,21 +42,25 @@ body {
     letter-spacing: .05em;
     animation:
         typing 2s steps(18),
-        cursor .4s step-end infinite alternate
+        cursor .4s step-end infinite alternate;
 }
 
 @keyframes typing {
-    from { width: 0;}
-    to {width: 100%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes cursor {
-    50% { border-color: transparent;}
+    50% {
+        border-color: transparent;
+    }
 }
-
-
 
 .hello span {
     font-weight: 400;
 }
-
