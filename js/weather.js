@@ -38,7 +38,7 @@ function Info(data) {
     // $('.tempInfo').append(temp)
     $('.weatherInfo').append(weather)
 
-//숫자 증가 애니메이션
+    //숫자 증가 애니메이션
     $({ val: 0 }).animate({ val: tempUp }, {
         duration: 1000,
         step: function () {
@@ -54,7 +54,7 @@ function Info(data) {
     function numberWithCommas(x) {
         return x
     }
-// 숫자증가 애니메이션 끝
+    // 숫자증가 애니메이션 끝
 }
 
 
@@ -107,3 +107,8 @@ icon.forEach((i) =>
     i.addEventListener('click', menuAct))
 
 
+
+
+  if(window.innerWidth <= 600){
+
+  }

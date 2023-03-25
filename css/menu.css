@@ -20,6 +20,9 @@ body {
 }
 
 .nowTemp {
+    display: flex;
+    justify-content: flex-start;
+    width: 550px;
     font-size: 40px;
     font-weight: 300;
     letter-spacing: .05em;
@@ -32,6 +35,9 @@ body {
 }
 
 .weatherInfo {
+    display: flex;
+    width: 550px;
+    justify-content: flex-start;
     font-size: 20px;
     font-weight: 300;
 }
@@ -43,7 +49,6 @@ body {
 .ani {
     height: 500px;
     display: flex;
-    justify-content: center;
     align-items: center;
     /* background-image: url(../img/weather.gif); */
     background-repeat: no-repeat;
@@ -601,14 +606,22 @@ body {
 
 /* 아이콘7 끝 */
 
+.wrap{
+    width: 550px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .navigation {
     width: 550px;
     height: 70px;
     background: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
+    justify-content: center;
     border: 1px solid var(--clr);
 }
 
@@ -619,7 +632,6 @@ body {
 }
 
 .navigation ul li {
-    position: relative;
     list-style: none;
     width: 70px;
     height: 70px;
@@ -654,12 +666,6 @@ body {
 
 
 
-
-
-
-
-
-
 .navigation ul li a .text {
     position: absolute;
     color: var(--clr);
@@ -690,8 +696,6 @@ body {
 .navigation ul li:nth-child(1).active~.indicator {
     transform: translateX(calc(70px*0));
 }
-
-
 
 .navigation ul li:nth-child(2).active~.indicator {
     transform: translateX(calc(70px*1));

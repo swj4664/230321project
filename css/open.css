@@ -18,6 +18,10 @@ a:hover {
     text-decoration: none;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
 
 .hello {
     display: inline-block;
@@ -25,7 +29,6 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     text-align: center;
 }
 
