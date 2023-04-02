@@ -45,6 +45,15 @@ body {
         cursor .4s step-end infinite alternate;
 }
 
+.hello a:nth-child(2) {
+    display: none;
+}
+
+.hello2 a{
+    display: none;
+}
+
+
 @keyframes typing {
     from {
         width: 0;
